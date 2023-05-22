@@ -64,7 +64,7 @@ void loop()
   Serial.println(valTerreno);
   delay(1000);
 
-  if (val == 1 || i == 600)
+  if (val == 1 || i == 1800)
   {
     valore1 = analogRead(foto1);
 
