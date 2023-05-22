@@ -148,13 +148,13 @@ void loop() {
   delay(1000);
   loop_water();
   delay(1000);
-  // Se il fotoresistore centrale è coperto e il valore terra è sopra 20 e sotto 100 attiva la pompa al pin 9 per ... secondi
+  // Se il fotoresistore centrale è coperto e il valore terra è sopra 20 e sotto 100 attiva la pompa al pin 9 per 2 secondi
   int valoreTerreno = analogRead(pinWater);
   int valoreFotoresistore = analogRead(pinFotoresistore);
   if (valoreFotoresistore < 20 && (valoreTerreno > 10 && valoreTerreno < 100)) { 
     delay(20000);
     digitalWrite(pinPompaAcqua, HIGH);
-    delay(3000);
+    delay(2000);
     digitalWrite(pinPompaAcqua, LOW);
   }
 }
